@@ -365,3 +365,17 @@ ostream &operator << (ostream &out, BigDecimalInt num)
     }
     return out;
 }
+
+//Setters and getters
+void BigDecimalInt::setNumberValue(string num) {
+    number = num;
+}
+string BigDecimalInt::getNumber() {
+    return number;
+}
+void BigDecimalInt::setSign(char signVal) {
+    sign = signVal;
+}
+char BigDecimalInt::getSign() {
+    return sign;
+}

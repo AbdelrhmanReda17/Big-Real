@@ -27,6 +27,10 @@ private:
     bool checkValidInput(string input);
 
 public:
+    string getNumber();
+    char getSign();
+    void setNumberValue(string num);
+    void setSign(char signVal);
     bool operator < (const BigDecimalInt& anotherDec);
     bool operator > (const BigDecimalInt& anotherDec);
     bool operator == (const BigDecimalInt anotherDec);
