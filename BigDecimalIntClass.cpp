@@ -107,7 +107,6 @@ bool BigDecimalInt :: operator == (const BigDecimalInt anotherDec)
     if (sign == anotherDec.sign && number == anotherDec.number)
     {
         return true;
-
     }
     else
     {
@@ -121,7 +120,6 @@ BigDecimalInt& BigDecimalInt :: operator = (BigDecimalInt &anotherDec)
     number = anotherDec.number;
     return *this;
 }
-
 // // operator + overloading function.
 BigDecimalInt BigDecimalInt :: operator + (BigDecimalInt number2)
 {

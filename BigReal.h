@@ -3,7 +3,7 @@
 #include "BigDecimalIntClass.cpp"
 using namespace std;
 
-class BigReal {
+class BigReal{
 private:
     BigDecimalInt number,fraction;
 public:
@@ -20,7 +20,7 @@ public:
     bool operator> (BigReal anotherReal);
     bool operator== (BigReal anotherReal);
     int size();
-    int sign();
+    int Sign();
     friend ostream& operator << (ostream& out, BigReal num);
     friend istream& operator >> (istream& out, BigReal num);
 };
