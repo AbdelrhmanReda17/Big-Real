@@ -69,10 +69,16 @@ int BigReal::size(){
 }
 ostream& operator << (ostream& out, BigReal num){
     if(num.number.Sign()=='-'){
-        out << num.number.Sign() << num.number << "." << num.fraction << endl;
+        out << num.number.Sign();
+        out<<num.number;
+        out<<".";
+        out<<num.fraction << endl;
     }
     else{
-        out <<"+"<< num.number << "." << num.fraction << endl;
+        out <<"+" ;
+        out<<num.number;
+        out<<"." ;
+        out<< num.fraction << endl;
     }
 }
 istream& operator >> (istream& out, BigReal num){
@@ -183,6 +189,6 @@ bool BigReal::operator== (BigReal anotherReal){
             return false;
         }
     }
-    return true;
+    return false;
 }
 
