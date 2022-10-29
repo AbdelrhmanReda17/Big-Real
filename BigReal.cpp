@@ -80,6 +80,7 @@ ostream& operator << (ostream& out, BigReal num){
         out<<"." ;
         out<< num.fraction << endl;
     }
+    return out;
 }
 
 istream& operator >> (istream& out, BigReal& num){
@@ -279,7 +280,8 @@ BigReal BigReal::operator- (BigReal& other)
         BigDecimalInt sum = first - second;
 
         string str = sum.getNumber();
-        str.insert(size, ".");
+        while (str.size()<=size) str = '0' + str;
+        str.insert(str.size()-size, ".");
         BigReal result = str;
         result.number.setSign(sum.getSign());
         return result;
