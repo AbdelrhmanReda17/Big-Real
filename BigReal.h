@@ -22,7 +22,7 @@ public:
     int size();
     int Sign();
     friend ostream& operator << (ostream& out, BigReal num);
-    friend istream& operator >> (istream& out, BigReal num);
+    friend istream& operator >> (istream& out, BigReal& num);
 };
 
 

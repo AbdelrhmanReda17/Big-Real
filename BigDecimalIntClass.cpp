@@ -355,11 +355,11 @@ ostream &operator << (ostream &out, BigDecimalInt num)
 {
     if(num.sign == '+')
     {
-        out << num.number << endl;
+        out << num.number;
     }
     else
     {
-        out << num.sign << num.number << endl;
+        out << num.sign << num.number;
     }
     return out;
 }
